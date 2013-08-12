@@ -1,0 +1,12 @@
+<h2>New Recipe</h2>
+
+<form action=<%= recipes_url %> method="post">
+
+  Ingredients:
+  <textarea name="recipe[ingredientslist]"></textarea>
+  <br>
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <br>
+  <input type="submit" value="New Recipe Thingy">
+
+  </form>

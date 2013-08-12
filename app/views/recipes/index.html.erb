@@ -1,0 +1,21 @@
+<% colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'] %>
+
+<div class="top">
+<h2>#TotM Mega Website X</h2>
+<h3><%=auto_link("READ: https://bit.ly/totm-en or https://bit.ly/totm-sv")%></h3>
+</div>
+
+<% @recipes.each_with_index do |recipe, i| %>
+<div class='content' style="background-color: <%= colors[i % 7] %>;">
+  <h2 class='totm-num'>totm <%= recipe.id %></h2>
+  <h4>Ingredients List</h4>
+  <br>
+ <div class='ingredients-list'>
+ <%= auto_link(recipe.ingredientslist.html_safe) %>
+</div>
+
+  <br>
+  <br>
+</div>
+<% end %>
+

@@ -1,0 +1,19 @@
+<h2>Edit Recipe</h2>
+
+<form action=<%= recipe_url(params[:id]) %> method="post">
+
+  Ingredients:
+  <textarea name="recipe[ingredientslist]"><%= @recipe.ingredientslist %></textarea>
+  <br>
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <br>
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="Edit Recipe Thingy">
+
+  </form>
+
+  <form action=<%= recipe_url %> method="post">
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Recipe">
+</form>
