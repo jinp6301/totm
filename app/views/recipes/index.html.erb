@@ -8,8 +8,7 @@
 <% @recipes.each_with_index do |recipe, i| %>
 <div class='content' style="background-color: <%= colors[i % 7] %>;">
   <h2 class='totm-num'>TOTM <%= recipe.id %></h2>
-  <br>
- <div class='ingredients-list'>
+  <div class='ingredients-list'>
   <h3>Ingredients</h3>
  <%= auto_link(recipe.ingredientslist.html_safe) %>
 </div>
