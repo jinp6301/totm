@@ -3,7 +3,8 @@
 <form action=<%= recipe_url(params[:id]) %> method="post">
 
   Ingredients:
-  <textarea name="recipe[ingredientslist]"><%= @recipe.ingredientslist %></textarea>
+  <br>
+  <textarea rows="6" cols="100" name="recipe[ingredientslist]"><%= @recipe.ingredientslist %></textarea>
   <br>
   <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
   <br>
